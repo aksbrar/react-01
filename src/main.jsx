@@ -1,42 +1,22 @@
 // imports
 import {createRoot} from 'react-dom/client'
-import { Fragment } from 'react'
+import Header from './header.jsx'
+import Content from './content.jsx'
 
-// create root
+// root
 const root = createRoot(document.querySelector('#root'))
 
-// start something
+// render
 root.render(
-  <Fragment>
-    <Header />
-    <Main />
-    <Footer />
-  </Fragment>
+  <Page />
 )
 
-// page
-function Header() {
+// function to page
+function Page() {
   return (
-    <header>
-      <h1>Akspreet Singh</h1>
-    </header>
-  )
-}
-
-function Main(){
-  return (
-    <details>
-      <summary>Click to see description</summary>
-      <p>This is the full description that appears when you click. You can put any text or HTML here.</p>
-    </details>
-  )
-}
-
-function Footer(){
-  return (
-    <Fragment>
-      <name>By aks</name>
-      <p>Date - 21 july</p>
-    </Fragment>
+    <>
+      <Header />
+      <Content />
+    </>
   )
 }
